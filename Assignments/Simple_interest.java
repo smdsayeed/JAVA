@@ -8,28 +8,25 @@ public class Simple_interest {
    
     public static void main(String[] args) {
         System.out.println("Enter the principal (investing money)");
-        Scanner input = new Scanner(System.in);
-        int p = input.nextInt();
+        try (Scanner input = new Scanner(System.in)) {
+            int p = input.nextInt();
 
-        System.out.println("Enter the rate of Interest ");
-        int r = input.nextInt();
-        
+            System.out.println("Enter the rate of Interest ");
+            int r = input.nextInt();
+            
 
-        System.out.println("Enter the time period in Years");
-        int y = input.nextInt();
+            System.out.println("Enter the time period in Years");
+            int y = input.nextInt();
 
-        float i = (p*r*y)/100;
-        float amount = p + i;
+            float i = (p*r*y)/100;
+            float amount = p + i;
 
-       
-        System.out.println("interest rate is :" + i);
-        System.out.println("Amount is :" + amount);
+      
+            System.out.println("interest rate is :" + i);
+            System.out.println("Amount is :" + amount);
+        }
 
 
-    }
-
-    private static float p(float f) {
-        return f;
     }
     
 }

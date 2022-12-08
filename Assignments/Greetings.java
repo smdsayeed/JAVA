@@ -7,13 +7,14 @@ public class Greetings {
         
         // Taking name as an input 
         System.out.println("Please Enter the name");
-        Scanner input = new Scanner(System.in);
-        String name = input.next();
+        try (Scanner input = new Scanner(System.in)) {
+            String name = input.next();
 
-        switch(name){
-            case "Smd.Sayeed"->System.out.println(" Greetings " + name + "!");
-            case "Smd.Kasheef"->System.out.println(" Greetings " + name + "!");
-            default->System.out.println("You are not Authorized");
+            switch(name){
+                case "Smd.Sayeed"->System.out.println(" Greetings " + name + "!");
+                case "Smd.Kasheef"->System.out.println(" Greetings " + name + "!");
+                default->System.out.println("You are not Authorized");
+            }
         }
     }
 }
